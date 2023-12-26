@@ -34,12 +34,8 @@
 #head {
   display: flex;
   justify-content: space-between;
-  padding: 20px 70px;
+  padding: 20px 30px;
   margin-bottom: 30px;
-
-  @include mobile {
-    padding: 20px 20px;
-  }
 
   .image {
     display: none;
@@ -80,7 +76,6 @@
       row-gap: 13px;
 
       @include mobile {
-        flex-direction: column;
         align-items: center;
       }
 
@@ -97,7 +92,7 @@
         font-size: 30px;
 
         @include mobile {
-          font-size: 22px;
+          font-size: 23px;
         }
       }
 
@@ -105,15 +100,15 @@
         width: 65%;
 
         @include mobile {
-          width: 60%;
+          font-size: 15px;
         }
       }
     }
 
     &-image {
       @include mobile {
+        padding: 0px 20px;
         width: 100%;
-        padding: 0px 10px;
       }
     }
   }
@@ -134,7 +129,7 @@
       width: 43%;
 
       @include mobile {
-        width: 70%;
+        width: 65%;
       }
     }
   }
@@ -173,12 +168,20 @@
           cursor: pointer;
 
           @include mobile {
-            width: 50%;
-            padding: 20px;
+            width: 80%;
+            height: 65px;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 10px;
           }
 
           &-image {
             background-color: #21201d;
+
+            @include mobile {
+              width: 40px;
+              height: 40px;
+            }
           }
 
           &-name {
@@ -296,9 +299,9 @@
     margin-bottom: 20px;
 
     @include mobile {
+      align-items: center;
       flex-direction: column;
       row-gap: 20px;
-      align-items: center;
     }
 
     &-ontalex {
@@ -317,6 +320,10 @@
       &-description {
         width: 35%;
         letter-spacing: 1px;
+
+        @include mobile {
+          width: 85%;
+        }
       }
     }
 
@@ -330,10 +337,20 @@
         display: flex;
         column-gap: 40px;
 
+        @include mobile {
+          align-items: center;
+          flex-direction: column;
+          row-gap: 20px;
+        }
+
         &-left {
           display: flex;
           flex-direction: column;
           row-gap: 12px;
+
+          @include mobile {
+            align-items: center;
+          }
         }
 
         &-right {

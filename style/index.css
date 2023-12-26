@@ -28,13 +28,8 @@
 #head {
   display: flex;
   justify-content: space-between;
-  padding: 20px 70px;
+  padding: 20px 30px;
   margin-bottom: 30px;
-}
-@media (max-width: 575px) {
-  #head {
-    padding: 20px 20px;
-  }
 }
 #head .image {
   display: none;
@@ -75,7 +70,6 @@
 }
 @media (max-width: 575px) {
   #main .information-container {
-    flex-direction: column;
     align-items: center;
   }
 }
@@ -93,7 +87,7 @@
 }
 @media (max-width: 575px) {
   #main .information-container-content {
-    font-size: 22px;
+    font-size: 23px;
   }
 }
 #main .information-container-description {
@@ -101,13 +95,13 @@
 }
 @media (max-width: 575px) {
   #main .information-container-description {
-    width: 60%;
+    font-size: 15px;
   }
 }
 @media (max-width: 575px) {
   #main .information-image {
+    padding: 0px 20px;
     width: 100%;
-    padding: 0px 10px;
   }
 }
 #main .about {
@@ -129,7 +123,7 @@
 }
 @media (max-width: 575px) {
   #main .about-description {
-    width: 70%;
+    width: 65%;
   }
 }
 #main .skills {
@@ -167,12 +161,22 @@
 }
 @media (max-width: 575px) {
   #main .skills-container-list-item {
-    width: 50%;
-    padding: 20px;
+    width: 80%;
+    height: 65px;
+    flex-direction: row;
+    align-items: center;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
   }
 }
 #main .skills-container-list-item-image {
   background-color: #21201d;
+}
+@media (max-width: 575px) {
+  #main .skills-container-list-item-image {
+    width: 40px;
+    height: 40px;
+  }
 }
 #main .skills-container-list-item-name {
   background-color: #21201d;
@@ -275,9 +279,9 @@
 }
 @media (max-width: 575px) {
   #footer .container {
+    align-items: center;
     flex-direction: column;
     row-gap: 20px;
-    align-items: center;
   }
 }
 #footer .container-ontalex {
@@ -297,6 +301,11 @@
   width: 35%;
   letter-spacing: 1px;
 }
+@media (max-width: 575px) {
+  #footer .container-ontalex-description {
+    width: 85%;
+  }
+}
 #footer .container-contact-title {
   margin-bottom: 10px;
   color: #ff8303;
@@ -306,10 +315,22 @@
   -moz-column-gap: 40px;
        column-gap: 40px;
 }
+@media (max-width: 575px) {
+  #footer .container-contact-container {
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
 #footer .container-contact-container-left {
   display: flex;
   flex-direction: column;
   row-gap: 12px;
+}
+@media (max-width: 575px) {
+  #footer .container-contact-container-left {
+    align-items: center;
+  }
 }
 #footer .container-contact-container-right {
   display: flex;
