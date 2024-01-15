@@ -1,0 +1,364 @@
+@import "./mixins.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #000;
+  color: bisque;
+}
+
+// link color changed
+.link {
+  color: bisque;
+
+  &:hover {
+    color: #ff8303;
+  }
+}
+
+// active class
+.active {
+  color: #ff8303;
+}
+
+// border bottom line
+.line {
+  border-top: 10px;
+  border-bottom: 2px solid #ff8303;
+}
+
+#head {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  margin-bottom: 30px;
+
+  .image {
+    display: none;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  .navbar {
+    &-list {
+      display: flex;
+      column-gap: 50px;
+      font-size: 17px;
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+#main {
+  .information {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      row-gap: 13px;
+
+      @include mobile {
+        align-items: center;
+      }
+
+      &-name {
+        font-size: 55px;
+        color: #ff8303;
+
+        @include mobile {
+          font-size: 30px;
+        }
+      }
+
+      &-content {
+        font-size: 30px;
+
+        @include mobile {
+          font-size: 23px;
+        }
+      }
+
+      &-description {
+        width: 65%;
+
+        @include mobile {
+          font-size: 15px;
+        }
+      }
+    }
+
+    &-image {
+      @include mobile {
+        padding: 0px 20px;
+        width: 100%;
+      }
+    }
+  }
+
+  .about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 13px;
+    margin-bottom: 30px;
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    &-description {
+      width: 43%;
+
+      @include mobile {
+        width: 65%;
+      }
+    }
+  }
+
+  .skills {
+    margin-bottom: 30px;
+
+    &-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    &-container {
+      &-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 20px;
+
+        @include mobile {
+          flex-direction: column;
+          row-gap: 20px;
+        }
+
+        &-item {
+          width: 10%;
+          height: 10%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          row-gap: 10px;
+          padding: 30px;
+          border-radius: 5px;
+          background-color: #21201d;
+          color: #fff;
+          cursor: pointer;
+
+          @include mobile {
+            width: 80%;
+            height: 65px;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 10px;
+          }
+
+          &-image {
+            background-color: #21201d;
+
+            @include mobile {
+              width: 40px;
+              height: 40px;
+            }
+          }
+
+          &-name {
+            background-color: #21201d;
+          }
+        }
+      }
+    }
+  }
+
+  .work {
+    margin-bottom: 50px;
+
+    &-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    &-container {
+      display: flex;
+      justify-content: center;
+      column-gap: 20px;
+
+      @include mobile {
+        flex-direction: column;
+        row-gap: 20px;
+        padding: 0px 20px;
+      }
+
+      &-left {
+        width: 380px;
+        height: 320px;
+        background-color: #21201d;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 15px;
+        padding: 20px;
+
+        @include mobile {
+          width: 100%;
+        }
+
+        &-title {
+          color: #ff8303;
+          background-color: #21201d;
+        }
+
+        &-language {
+          background-color: #21201d;
+        }
+
+        &-description {
+          width: 70%;
+          background-color: #21201d;
+        }
+
+        &-button {
+          width: 100px;
+          height: 40px;
+          background-color: #333333;
+          border-radius: 7px;
+          border: none;
+          cursor: pointer;
+        }
+      }
+
+      &-right {
+        width: 380px;
+        height: 320px;
+        background-color: #21201d;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 15px;
+        padding: 20px;
+
+        @include mobile {
+          width: 100%;
+        }
+
+        &-title {
+          color: #ff8303;
+          background-color: #21201d;
+        }
+
+        &-language {
+          background-color: #21201d;
+        }
+
+        &-description {
+          width: 70%;
+          background-color: #21201d;
+        }
+
+        &-button {
+          width: 100px;
+          height: 40px;
+          background-color: #333333;
+          border-radius: 7px;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  .container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    @include mobile {
+      align-items: center;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    &-ontalex {
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+
+      @include mobile {
+        align-items: center;
+      }
+
+      &-image {
+        width: 30%;
+      }
+
+      &-description {
+        width: 35%;
+        letter-spacing: 1px;
+
+        @include mobile {
+          width: 85%;
+        }
+      }
+    }
+
+    &-contact {
+      &-title {
+        margin-bottom: 10px;
+        color: #ff8303;
+      }
+
+      &-container {
+        display: flex;
+        column-gap: 40px;
+
+        @include mobile {
+          align-items: center;
+          flex-direction: column;
+          row-gap: 20px;
+        }
+
+        &-left {
+          display: flex;
+          flex-direction: column;
+          row-gap: 12px;
+
+          @include mobile {
+            align-items: center;
+          }
+        }
+
+        &-right {
+          display: flex;
+          flex-direction: column;
+          row-gap: 12px;
+        }
+      }
+    }
+  }
+}
